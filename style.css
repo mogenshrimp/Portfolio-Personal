@@ -1,0 +1,911 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  overflow: auto;
+}
+
+.projects-container {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.project-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2f2f90; /* Sesuai warna tulisan "Projects" */
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: -20px; /* agar overlap sedikit ke kotak besar */
+  z-index: 2;
+  position: relative;
+}
+
+.tabs img {
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.big-box {
+  background-color: #f78f1e; /* Warna oranye */
+  border-radius: 20px;
+  padding: 40px 20px 20px;
+	margin-top: 70px;
+	margin-left: 310px;
+  width: 50%;
+  max-width: 800px;
+  position: relative;
+}
+
+.white-line {
+  height: 2px;
+  background-color: white;
+  width: 90%;
+  margin: 0 auto 30px;
+}
+
+.big-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.LandingPageWrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-landing,
+.bottom-asset {
+  position: absolute;
+  width: 100%;
+  height: auto;
+	max-height: 30vh;
+  object-fit: contain;
+  z-index: 0;
+	margin-top: -90px;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;        /* tengah secara vertikal */
+  right: 0;        /* nempel ke sisi kanan */
+  transform: translateY(-50%);  /* benerin posisi ke tengah vertikal */
+  z-index: 10;     /* pastikan tetap di atas */
+  width: auto;     /* biar fleksibel */
+  padding-right: 80px; /* kasih jarak dikit dari sisi kanan */
+}
+
+.logo img {
+  width: 120px;    /* ukuran bisa kamu sesuaikan */
+  height: auto;
+  cursor: pointer; /* kasih efek tangan saat hover */
+}
+
+
+.Judul {
+  color: #2D337F;
+  font-family: "Inter", sans-serif;
+  font-size: 155px;
+	position: relative;
+	z-index: 2; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: -17px;
+  text-align: center;
+  line-height: 0.7; /* Biar teks lebih rapat */
+  gap: 0px; /* Ga usah pake jarak antar elemen */
+  margin-top: 100px; /* Naikin semuanya */}
+
+.kotakRounded img {
+  width: 700px; /* Bikin lebih gede */
+  height: auto;
+  margin: -90px 0 -5px 0; /* Naikin posisinya dan deketin ke teks atas & bawah */
+}
+
+
+
+.bottom-asset {
+  position: absolute;
+  bottom: -50px; /* makin negatif = makin turun */
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+/*halaman deep dive*/
+.containerkotak,
+.containerkotak2 {
+  display: flex;
+  justify-content: flex-end; /* biar kotaknya nempel kanan */
+  padding-right: 0; /* biar ga nempel banget ke sisi kanan */
+}
+
+
+.kotak {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+  font-size: 24px;
+}
+
+/* Warna khusus tiap kotak */
+.kotak1 {
+  background: #F78F1E;
+	 text-decoration: none;
+}
+.kotak2 {
+  background: #FFE5CA;
+}
+.kotak3 {
+  background: #F13F25;
+}
+.kotak4 {
+  background: #2D337F;
+}
+
+.containerkotak3 {
+  display: flex;
+}
+
+/* Tambahin position relative biar "EST 2020" bisa diposisikan absolut relatif ke sini */
+.DeepDive {
+  position: relative;
+  width: 1280px;
+  height: 232px;
+  font-size: 90px;
+  color: #2D337F;
+  text-align: left;
+  background: #F78F1E;
+  padding-top: 18px;
+  padding-left: 100px;
+  letter-spacing: -4px;
+  line-height: 1.0;
+}
+
+.tombolback {
+	  position: absolute;
+  bottom: 90px;
+  right: 30px;
+  width: 30px;
+  height: auto;
+}
+
+/* Gaya untuk tulisan "EST 2020" */
+.est {
+  position: absolute;
+  bottom: 35px;    /* jarak dari bawah */
+  right: 40px;     /* jarak dari kanan */
+  font-size: 40px;
+  color: #2D337F;
+}
+
+/*halaman about me*/
+.nana p{
+	position: relative;
+	left: 250px;
+	top: 120px;
+	font-size: 13px;
+}
+
+.nana img {
+  width: 250px;        /* atur lebar gambar */
+  height: auto;        /* biar proporsional */
+  margin-left: 230px;   /* jarak dari kiri */
+  margin-right: 30px;  /* jarak dari kanan */
+	margin-top: 120px;}
+
+
+.tombolback2 {
+  position: fixed;     /* biar ngambang dan tetap */
+  top: 40px;           /* jarak dari atas */
+  right: 90px;         /* jarak dari kanan */
+  width: 30px;         /* ukuran tombol */
+  height: auto;
+  z-index: 999;        /* biar gak ketiban elemen lain */
+  cursor: pointer;     /* biar keliatan bisa diklik */
+}
+
+
+/*judul*/
+.tulisan {
+  position: relative;
+  left: 550px; /* geser ke kanan */
+  top: -450px; /* geser ke bawah */
+  transform: translateX(0); /* opsional */
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+.namajudul {
+  font-size: 70px; /* atur ukuran judul */
+  margin-bottom: 5px; /* jarak antara h1 dan h3 */
+	font-weight: normal;
+	color: #2D337F;
+}
+
+.tulisan h3 {
+  font-size: 20px; /* ukuran subjudul */
+	font-weight: normal;
+	color: #F78F1E;
+}
+
+.garis-custom {
+  position: relative;
+	top: -425px;              /* atur jarak dari atas */
+  right: -550px;             /* makin kecil = makin ke kanan */
+  width: 499px;          /* atur panjang garis */
+  height: 2px;           /* ketebalan garis */
+  background-color: #D9D9D9;
+  border: none;
+}
+
+/*pengalaman*/
+.deskripsipengalaman {
+  position: relative; /* penting buat ngebatesin absolute child */
+  top: 10px;
+  left: 50px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tahun {
+	position: relative;
+  font-size: 50px;         /* angka lebih gede */
+  font-weight: bold;
+	top: -434px;
+  margin: 0;
+	margin-left: 500px;
+	color: #2D337F;
+}
+
+.pengalaman {
+  font-size: 15px;
+  position: relative;
+  color: #2D337F;
+  font-weight: normal;
+  margin-top: -420px;
+  margin-left: 30px;
+  line-height: 1.1;
+}
+
+
+.paragrafpengalaman {
+  font-size: 10px;
+	font-family: "Inter", sans-serif;
+  color: #2D337F;
+	  position: relative;
+  top: -420px; /* bisa positif (turun) atau negatif (naik) */
+	right: -485px;
+  white-space: pre-wrap; /* biar tetep wrap kalau panjang */
+	text-align: justify;
+	line-height: 1.5;
+}
+
+/*clients*/
+.deskripsiklien {
+	position: relative;
+  top: -588px;
+  left: -37px;
+  transform: translate(70%);
+  display: flex;           /* biar sejajar horizontal */
+  align-items: baseline;   /* biar rata bagian bawah teks */
+  gap: 8px;                /* jarak antara angka dan teks */
+}
+
+.jumlahklien {
+  font-size: 50px;         /* angka lebih gede */
+  font-weight: bold;
+  right: 90px;
+	color: #2D337F;
+}
+
+.inpoklien {
+  font-size: 15px;
+  color: #2D337F;
+  font-weight: normal;
+  position: absolute;
+  top: 20px; /* atur sesuai kebutuhan */
+  left: 99px; /* mulai dari kiri */
+}
+
+.paragrafklien {
+  font-size: 10px;
+	font-family: "Inter", sans-serif;
+  color: #2D337F;
+	  position: relative;
+  top: -585px; /* bisa positif (turun) atau negatif (naik) */
+	right: -790px;
+  white-space: pre-wrap; /* biar tetep wrap kalau panjang */
+	text-align: justify;
+	line-height: 1.5;
+}
+
+.unduhcv img {
+  position: relative;
+  top: -428px; /* makin negatif, makin naik */
+  left: 264px;
+  width: 10%;
+  transform: translate(5%);
+  z-index: 10;
+}
+
+.kotakmerah {
+  position: relative;
+  bottom: 580px; /* makin kecil = makin ke bawah */
+  left: 61.5%;
+  transform: translateX(-50%);
+  width: 450px;   /* atur ukuran kotaknya */
+  height: auto;   /* biar tinggi otomatis dari gambar */
+}
+
+.kotakmerah img {
+  width: 100%;   /* biar ngikutin kotaknya */
+  height: auto;
+}
+
+/* Teks kotak merah */
+.tekskiri,
+.tekskanan {
+  position: absolute;
+  z-index: 2;
+  color:#FFFFFF;
+  width: 45%;
+  top: 15px;
+}
+
+.tekskiri {
+  left: 1%;
+	top: 8%;
+}
+
+.tekskiri h2{
+	color:#FFFFFF;
+}
+
+.tekskiri pre{
+	left: 62px;
+	top: 40px;
+	position: absolute;
+}
+
+.tekskanan {
+  right: 1%;
+	top: 13%;
+}
+
+.subjudul, .subjudul2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+	text-align: center;
+}
+
+.softskills, .hardskills {
+  font-family: "Inter", sans-serif;
+  white-space: pre-line;
+  font-size: 10px;
+	text-align: center;
+	line-height: 1.5;
+}
+
+
+.section-bawah {
+  width: 100vw;
+  background-color: #F78F1E;
+  padding: 100px 20px;
+  color: #fff;
+  box-sizing: border-box;
+	margin-top: -500px;
+}
+
+.judul-utama {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.edu-item {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  color: #fff;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.edu-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.edu-year {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.edu-item p {
+  margin: 5px 0 10px 0;
+  font-weight: 400;
+}
+
+.edu-item ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.edu-item li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.exp-section {
+  width: 100vw;
+  background-color: #F78F1E;
+  padding: 100px 20px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.exp-item {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  color: #fff;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.exp-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.exp-year {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.exp-item ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+.exp-item li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+/* Reset bawaan */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* halaman kontak */
+.halaman-kontak {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Bagian kiri (gambar) */
+.kiri {
+  flex: 1;
+  overflow: hidden;
+}
+
+.kiri img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bagian kanan (text) */
+.kanan {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.konten-kanan {
+  padding: 40px 60px;
+  max-width: 500px;
+}
+
+/* Tombol kembali */
+.kembali {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Judul */
+.judul {
+  color: #2D3192;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+/* Paragraf kontak */
+.paragrafkontak {
+  font-size: 16px;
+  color: #F78F1E;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Email */
+.email {
+  font-size: 18px;
+  color: #F78F1E;
+  font-style: italic;
+  margin-bottom: 30px
+}
+
+.sosmed {
+	margin-top: 5px;
+}
+
+/*halaman services*/
+
+    .container {
+      position: relative;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tombol-back {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+    }
+
+    .banner img {
+      width: 700px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+
+    .services {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .text-vertical {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: bold;
+      font-size: 34px;
+      color: #2D337F;
+    }
+
+    .service-card {
+      width: 180px;
+      height: 180px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    .card1 {
+      background-color: #EE3D2E;
+    }
+
+    .card2 {
+      background-color: #7C1C1C;
+    }
+
+    .card3 {
+      background-color: #004AAD;
+      position: relative;
+      flex-direction: row;
+      color: white;
+      font-weight: normal;
+      font-size: 16px;
+    }
+
+    .card3 .text {
+      padding: 20px;
+    }
+
+    .card3 .highlight {
+      font-style: italic;
+      font-weight: bold;
+    }
+
+
+    .prompt-box {
+      background-color: #F78F1E;
+      border: 2px solid navy;
+      padding: 20px;
+      border-radius: 20px;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      max-width: 180px;
+      text-align: center;
+    }
+
+    .prompt-box strong {
+      color: white;
+    }
+
+/* halaman projects */
+.projects-container {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+/* Judul Projects */
+/* Judul Projects */
+.project-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2e3192;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: -24px;
+  transform: translateX(-90px); /* opsional kalau perlu geser */
+}
+
+.tabs img {
+  width: 98px;
+  height: 53px;
+  object-fit: contain;
+  border-radius: 6px;
+  top: -34px;
+	right: -30px;
+	position: relative;
+}
+
+/* Kotak besar oranye */
+.big-box {
+  background-color: #f78f1e;
+  border-radius: 20px;
+  padding: 40px 20px 20px;
+  margin: -45px auto;
+  width: 60%;
+  max-width: 800px;
+  position: relative;
+}
+
+/* Garis putih dalam kotak oranye */
+.white-line {
+  height: 2px;
+  background-color: white;
+  width: 90%;
+  margin: 10px auto 20px auto;
+}
+
+/* Gambar utama di dalam kotak besar */
+.big-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Angka 01–05 */
+.angka {
+  position: absolute;
+  top: 95px; /* Jarak dari atas halaman, bisa disesuaikan */
+  left: 45%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 90px; /* jarak antar angka */
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  z-index: 10; /* biar muncul di atas elemen lain kalau ketiban */
+}
+
+.angka a{
+	  text-decoration: none !important;
+  color: #FFFFFF !important;
+}
+
+/* Tulisan MBPM 2024 & HIMAPEDIA */
+.tulisanprojek {
+  text-align: center;
+  left: 320px;
+	top: 460px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+	position: absolute;
+  z-index: 15;
+
+}
+
+.tulisanprojek a {
+  text-decoration: none !important;
+  color: #FFFFFF !important;
+}
+
+
+}
+
+/* Gambar Projek (Adhinata, Kamera, Makna Logo) */
+.gambarprojek {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-top: 30px;
+}
+
+.gambarprojek img {
+  position: absolute;
+  object-fit: contain;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* Posisi spesifik berdasarkan mockup */
+.img-adhinata {
+  width: 150px;
+  top: -50%;
+  right: 37%;
+}
+
+.img-kamera {
+  width: 90px;
+  top: -360px;
+  left: 48%;
+}
+
+.img-logo {
+  width: 220px;
+  top: -63%;
+  right: 24%;
+}
+
+/*MBPM*/
+.wrapper {
+  background-color: white;
+  padding: 40px 24px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2e3192;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.judul-utama {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.subjudul {
+  font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  color: #2e3192;
+}
+
+.banner {
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.deskripsi {
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.tombol-back {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  z-index: 10;
+}
+
+.tombol-back img {
+  width: 32px;
+  height: 32px;
+}
+
+/*projek 2*/
+.big-box2 {
+  background-color: #F13F25;
+  border-radius: 20px;
+  padding: 40px 20px 20px;
+  margin: -45px auto;
+  width: 60%;
+  max-width: 800px;
+  position: relative;
+}
+
+
+/* Gambar utama di dalam kotak besar */
+.big-image2 {
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 70px;
+  max-width: 1000px;
+  margin: 0 auto;
+	margin: -30px -35px 0 -40px; /* geser ke atas & kiri */
+  box-sizing: border-box;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
